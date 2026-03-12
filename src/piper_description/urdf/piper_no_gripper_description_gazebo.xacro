@@ -431,7 +431,7 @@
 
 <!-- gz_ros2_control plugin for Gazebo Harmonic -->
   <gazebo>
-    <plugin filename="gz_ros2_control-system" name="gz_ros2_control::GzRos2ControlPlugin">
+    <plugin filename="gz_ros2_control-system" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
         <parameters> $(find piper_gazebo)/config/ros2_no_gripper_controllers.yaml </parameters>
         <robot_param_node>robot_state_publisher</robot_param_node>
     </plugin>
