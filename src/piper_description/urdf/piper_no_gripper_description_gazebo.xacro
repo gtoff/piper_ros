@@ -383,7 +383,7 @@
               <param name="max">1</param>
           </command_interface>
           <state_interface name="position">
-              <param name="initial_value">0.0</param>
+              <param name="initial_value">0.001</param>
           </state_interface>
           <state_interface name="velocity"/>
       </joint>
@@ -393,7 +393,7 @@
               <param name="max">1</param>
           </command_interface>
           <state_interface name="position">
-              <param name="initial_value">0.0</param>
+              <param name="initial_value">-0.001</param>
           </state_interface>
           <state_interface name="velocity"/>
       </joint>
