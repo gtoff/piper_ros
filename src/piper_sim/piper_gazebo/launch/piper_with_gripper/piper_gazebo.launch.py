@@ -56,6 +56,14 @@ def generate_launch_description():
         output='screen'
     )
 
+    # Bridge /clock from Gazebo to ROS
+    gz_clock_bridge = Node(
+        package='ros_gz_bridge',
+        executable='parameter_bridge',
+        arguments=['/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock'],
+        output='screen'
+    )
+
     # Spawn the robot in Gazebo using ros_gz_sim
     spawn_entity_cmd = Node(
         package='ros_gz_sim',
@@ -120,6 +128,7 @@ def generate_launch_description():
     ld.add_action(close_evt2)
     ld.add_action(node_gripper_mirror_controller)
     ld.add_action(start_gazebo_cmd)
+    ld.add_action(gz_clock_bridge)
     ld.add_action(node_robot_state_publisher)
     ld.add_action(spawn_entity_cmd)
 
