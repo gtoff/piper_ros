@@ -365,7 +365,7 @@
 
   <ros2_control name="GazeboSimSystem" type="system">
       <hardware>
-          <plugin>gz_ros2_control/GzSimSystem</plugin>
+          <plugin>gz_ros2_control/GazeboSimSystem</plugin>
       </hardware>
       <joint name="joint1">
           <command_interface name="position">
